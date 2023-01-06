@@ -13,89 +13,19 @@
     />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   </head>
-  <body>
+  <body style="background-color: #2b2a33;">
     <div class="container mt-5">
-        <h1>JOKE GENERATOR</h1>
-        <form>
-            <div class="mb-3">
-                <h3 class="pt-3">Category:</h3>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="category-any" checked>
-                    <label class="form-check-label" for="category-any">
-                      nany
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="category-custom" disabled>
-                    <label class="form-check-label" for="category-custom">
-                      custom
-                    </label>
-                  </div>
-                  <h3 class="pt-4">Lenguage:</h3>
-                  <select class="form-select" aria-label="Default select example">
-                    <option value="Spanish">Spanish</option>
-                    <option value="English">English</option>
-                    <option value="German">German</option>
-                    <option value="French">French</option>
-                    <option value="Portuguese">Portuguese</option>
-                    <option value="Czech">Czech</option>
-                  </select>
-                  <h3 class="pt-4">Tags(optional):</h3>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="nsfw" id="cb-nsfw">
-                    <label class="form-check-label" for="cb-nsfw">
-                      nsfw
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="religious" id="cb-religious" checked>
-                    <label class="form-check-label" for="cb-religious">
-                      religious
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="political" id="cb-political">
-                    <label class="form-check-label" for="cb-political">
-                      political
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="racist" id="cb-racist">
-                    <label class="form-check-label" for="cb-racist">
-                      racist
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="sexist" id="cb-sexist">
-                    <label class="form-check-label" for="cb-sexist">
-                      sexist
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="explicit" id="cb-explicit">
-                    <label class="form-check-label" for="cb-explicit">
-                      explicit
-                    </label>
-                  </div>
-                  <h3 class="pt-4">joke type:</h3>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="single" id="cb-single">
-                    <label class="form-check-label" for="cb-single">
-                      single
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="twopart" id="cb-twopart">
-                    <label class="form-check-label" for="cb-twopart">
-                      twopart
-                    </label>
-                  </div>
-                  <h3 class="pt-4">Amount of jokes:</h3>
-                   <input type="number" id="amount-j" min="1" value="1">
-            </div>
-            <button class="btn btn-primary" type="submit" id="generate">Generar</button>
-          </form>
-        <div id="text"></div>
+      <div class="position-absolute top-50 start-50 translate-middle d-flex flex-column bd-highlight mb-3 justify-content-center align-items-center" style="background-color: #1c1b22; border-radius: 10px; width: 500px; height: 280px;">
+        <h1 class="text-light">JOKE GENERATOR</h2>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-content: center; align-items: center;">
+          <textarea class="form-control" aria-label="With textarea" id="text"  style="width: 400px !important;"></textarea>
+          <button type="button" class="btn btn-light mt-3 px-4" style="font-size: 18px;" id="generate" >Generar</button>
+        </div>
+      </div>
+    </div>
+    <div class="position-absolute bottom-0 start-0">
+      <h4 class="text-light fs-6">Developer: Angel Mancilla</h4>
+       <p class="text-light">API: <a  class="text-light" href="https://v2.jokeapi.dev" target="_blank">https://v2.jokeapi.dev</a></p>
     </div>
   </body>
   <script src="../app.js"></script>

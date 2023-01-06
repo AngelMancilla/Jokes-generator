@@ -1,24 +1,14 @@
-const jokeGen = document.getElementById("generate")
+const genButton = document.getElementById("generate")
+const jokeText = document.getElementById("text")
 
-//Funciones
-const jokeSettings = () => {
-    
-}
-
-function JokeGen() {
-    fetch('https://v2.jokeapi.dev/joke')
+genButton.addEventListener("click", () => {
+  fetch("https://v2.jokeapi.dev/joke/Any?lang=es&type=single")
     .then(res => res.json())
     .then(data => {
-       console.log(data)
-       let jokeText = document.getElementById("text")
-       jokeText.innerHTML = `<p>${data.message}<p/>` 
+      jokeText.value = `${data.joke}`
     })
-}
-
-jokeGen.addEventListener("click", e => {
-    
-    JokeGen()
-}) 
-
-
+    .catch(e => {
+      console.error(e)
+    })
+});
 
